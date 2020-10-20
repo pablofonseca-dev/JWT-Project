@@ -1,0 +1,104 @@
+/* Base */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #FAFAFA; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif; }
+
+h1 {
+  font-size: 3.7rem; }
+
+h2 {
+  font-size: 3.08333rem; }
+
+h3 {
+  font-size: 2.46667rem; }
+
+h4 {
+  font-size: 1.85rem; }
+
+h5 {
+  font-size: 1.23333rem; }
+
+h6 {
+  font-size: 0.61667rem; }
+
+li, span {
+  font-family: 'Quicksand', sans-serif; }
+
+/* Navbar */
+.navbar {
+  margin: 0;
+  padding: 0;
+  border: none; }
+  .navbar__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5dd;
+    padding: 1rem 0;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1); }
+  .navbar__item {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    padding-left: 1em; }
+  .navbar__link {
+    text-decoration: none;
+    color: #444444; }
+
+/* Landing */
+.landing {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  min-height: 60vh;
+  justify-items: start;
+  align-items: center;
+  margin-top: 2em;
+  padding-left: 2%; }
+  .landing .picture-component img {
+    max-width: 90%; }
+  .landing .headings-component {
+    padding-left: 2%; }
+    .landing .headings-component h1, .landing .headings-component h4, .landing .headings-component a {
+      padding: 0.5rem 0; }
+    .landing .headings-component h1 {
+      color: #444444; }
+    .landing .headings-component h4 {
+      color: #999999; }
+
+.button {
+  display: inline-block;
+  margin: 1.5% 0;
+  padding: 1rem 2rem !important;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700; }
+  .button--yellow {
+    background-color: #fde49a; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 2%; }
+  .footer .copy-right {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    color: #999999;
+    opacity: 0.4; }

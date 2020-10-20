@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metadata'); -%>
+    <title>Smoothies | Main Page</title>
+    <link rel="stylesheet" href="/assets/styles/css/index.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <%- include('./partials/header'); -%>
+            <div class="landing">
+                <div class="picture-component">
+                    <img src="/assets/images/smoothie.png" alt="Smothie image" class="picture-component__img" />
+                </div>
+                <div class="headings-component">
+                    <h1 class="headings-component__heading">Smothie Recipes</h2>
+                    <h4 class="headings-component__heading">By Pablo Fonseca</h3>
+                    <a class="button button--yellow" href="/smoothies" class="headings-component__link">View Recipes</a>
+                </div>
+            </div>
+        </header>
+    </main>
+    <%- include('./partials/footer'); -%>
+</body>
+
+</html>

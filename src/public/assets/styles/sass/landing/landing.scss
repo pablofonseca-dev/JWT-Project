@@ -1,0 +1,28 @@
+/* Landing */
+
+.landing{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: 60vh;
+    justify-items: start;
+    align-items: center;
+    margin-top: 2em;
+    padding-left: 2%;
+    .picture-component{
+        img{
+            max-width: 90%;
+        }
+    }
+    .headings-component{
+        padding-left: 2%;
+        h1, h4, a{
+            padding: 0.5rem 0;
+        }
+        h1{
+            color: #444444; 
+        }
+        h4{
+            color: #999999;
+        }
+    }
+}

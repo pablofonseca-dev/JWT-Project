@@ -1,0 +1,33 @@
+/* Base */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #FAFAFA; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif; }
+
+h1 {
+  font-size: 3.7rem; }
+
+h2 {
+  font-size: 3.08333rem; }
+
+h3 {
+  font-size: 2.46667rem; }
+
+h4 {
+  font-size: 1.85rem; }
+
+h5 {
+  font-size: 1.23333rem; }
+
+h6 {
+  font-size: 0.61667rem; }
+
+li, span {
+  font-family: 'Quicksand', sans-serif; }
