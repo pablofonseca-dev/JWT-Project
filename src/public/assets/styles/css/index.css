@@ -1,104 +1,130 @@
-/* Base */
+/**************************************************************************** */
+/* SMACSS Base.
+***************************************************************************** */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #FAFAFA; }
-
-h1, h2, h3, h4, h5, h6 {
-  padding: 0;
-  margin: 0;
+  background: #FAFAFA;
+  line-height: 1.5;
+  color: #333333;
   font-family: 'Quicksand', sans-serif; }
 
+/* For each h[1-6] generate the instruction block. */
 h1 {
-  font-size: 3.7rem; }
+  padding: 0;
+  margin: 0; }
 
 h2 {
-  font-size: 3.08333rem; }
+  padding: 0;
+  margin: 0; }
 
 h3 {
-  font-size: 2.46667rem; }
+  padding: 0;
+  margin: 0; }
 
 h4 {
-  font-size: 1.85rem; }
+  padding: 0;
+  margin: 0; }
 
 h5 {
-  font-size: 1.23333rem; }
+  padding: 0;
+  margin: 0; }
 
 h6 {
-  font-size: 0.61667rem; }
-
-li, span {
-  font-family: 'Quicksand', sans-serif; }
-
-/* Navbar */
-.navbar {
-  margin: 0;
   padding: 0;
-  border: none; }
-  .navbar__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
-    background-color: #fdf5dd;
-    padding: 1rem 0;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1); }
-  .navbar__item {
-    display: inline-block;
-    list-style-type: none;
-    font-size: 1.8rem !important;
-    font-weight: 700;
-    padding-left: 1em; }
-  .navbar__link {
-    text-decoration: none;
-    color: #444444; }
+  margin: 0; }
 
-/* Landing */
-.landing {
+/* For each h[1-6] generate the instruction block for divide h[1-6] font size. */
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.66667rem; }
+
+h3 {
+  font-size: 1.33333rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 0.66667rem; }
+
+h6 {
+  font-size: 0.33333rem; }
+
+li, span, label {
+  font-size: 1.5rem; }
+
+/**************************************************************************** */
+/* SMACSS Modules.
+***************************************************************************** */
+.button {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 1.3px; }
+  .button--yellow {
+    background-color: #fde49a; }
+
+.picture {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 10px;
+  min-height: 10px;
+  max-height: 100%; }
+
+.hgroup__heading {
+  padding: 0.5rem 0; }
+
+/**************************************************************************** */
+/* SMACSS Layouts.
+***************************************************************************** */
+#header {
   display: grid;
+  gap: 3rem;
   grid-template-columns: 20% 80%;
   min-height: 60vh;
   justify-items: start;
   align-items: center;
   margin-top: 2em;
   padding-left: 2%; }
-  .landing .picture-component img {
-    max-width: 90%; }
-  .landing .headings-component {
-    padding-left: 2%; }
-    .landing .headings-component h1, .landing .headings-component h4, .landing .headings-component a {
-      padding: 0.5rem 0; }
-    .landing .headings-component h1 {
-      color: #444444; }
-    .landing .headings-component h4 {
-      color: #999999; }
 
-.button {
-  display: inline-block;
-  margin: 1.5% 0;
-  padding: 1rem 2rem !important;
-  border-radius: 20px;
-  text-decoration: none;
-  color: #333333;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700; }
-  .button--yellow {
-    background-color: #fde49a; }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 2%; }
-  .footer .copy-right {
+#footer {
+  width: 100vw; }
+  #footer .footer__copy-right {
     text-align: center;
-    display: block;
+    display: inline-block;
     font-weight: 700;
     color: #999999;
-    opacity: 0.4; }
+    opacity: 0.4;
+    width: 100vw;
+    font-size: 1rem; }
+
+#primary-navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 0;
+  padding: 1rem 0;
+  margin-bottom: 1rem 0;
+  border: none;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fdf5dd; }
+  #primary-navbar .primary-navbar__item {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1.7rem !important;
+    font-weight: 700;
+    padding-left: 1em; }
+  #primary-navbar .primary-navbar__link {
+    text-decoration: none;
+    color: #444444; }

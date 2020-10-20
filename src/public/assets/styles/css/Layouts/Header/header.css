@@ -1,0 +1,9 @@
+#header {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 20% 80%;
+  min-height: 60vh;
+  justify-items: start;
+  align-items: center;
+  margin-top: 2em;
+  padding-left: 2%; }

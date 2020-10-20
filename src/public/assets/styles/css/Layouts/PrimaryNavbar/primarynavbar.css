@@ -1,0 +1,23 @@
+#primary-navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 0;
+  padding: 1rem 0;
+  margin-bottom: 1rem 0;
+  border: none;
+  flex-wrap: wrap;
+  align-items: center; }
+  #primary-navbar--shadowed {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1); }
+  #primary-navbar--bg-yellow {
+    background-color: #fdf5dd; }
+  #primary-navbar .primary-navbar__item {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1.7rem !important;
+    font-weight: 700;
+    padding-left: 1em; }
+  #primary-navbar .primary-navbar__link {
+    text-decoration: none;
+    color: #444444; }

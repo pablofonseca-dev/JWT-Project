@@ -1,0 +1,10 @@
+#footer {
+  width: 100vw; }
+  #footer .footer__copy-right {
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    color: #999999;
+    opacity: 0.4;
+    width: 100vw;
+    font-size: 1rem; }

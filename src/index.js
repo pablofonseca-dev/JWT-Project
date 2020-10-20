@@ -4,13 +4,14 @@ const morgan = require('morgan');
 const server = express(); 
 const path = require('path');
 const PORT = process.env.PORT || 3001; 
-
+const authRoutes = require('./routes/authRoutes');
+const mainRoutes = require('./routes/mainRoutes');
 
 /**************************************************************************** */
 /* DataBase configuration. 
 ***************************************************************************** */
 
-const URI = "mongodb+srv://PabloFonsecaMoncada:mongodb2019Pass!@jwtcluster.3v6bu.mongodb.net/<JWTDB>?retryWrites=true&w=majority";
+const URI = "mongodb+srv://PabloFonsecaMoncada:mongodb2019Pass!@jwtcluster.3v6bu.mongodb.net/node-auth?retryWrites=true&w=majority";
 
 /**
  * Avoiding Deprecation Messages. 
@@ -28,7 +29,7 @@ mongoose.connect(URI)
         console.log(`App running at localhost: ${PORT}`);
     });
 })
-.catch(() => console.log);
+.catch((error) => console.log(error));
 
 
 /**************************************************************************** */
@@ -37,6 +38,7 @@ mongoose.connect(URI)
 //Morgan configuration like middleware between connections. 
 server.use(morgan('dev'));
 
+//Set default directory for static files: All public files CSS, Scripts, Libraries, etc. 
 server.use(express.static(path.join(__dirname, "/public")));
 
 //Set default view engine.
@@ -46,16 +48,8 @@ server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, '/views'))
 /**************************************************************************** */
 
-//Basic Web API.
-server.get('/', function(request, response){
-    response.render("index");
-    response.statusCode = 200;
-    response.end(); 
-});
-
-server.get('/smoothies', function(request, response){
-    response.redirect('/');
-    response.statusCode = 300;
-    console.log("So you want a smoothie ha!"); 
-    response.end(); 
-});
+/**************************************************************************** */
+/* Routes configuration. 
+***************************************************************************** */
+server.use(mainRoutes);
+server.use(authRoutes);

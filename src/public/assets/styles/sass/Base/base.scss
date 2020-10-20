@@ -1,0 +1,41 @@
+
+/**************************************************************************** */
+/* SMACSS Base.
+***************************************************************************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+    padding: 0; 
+    margin: 0;
+
+    box-sizing: border-box;
+
+    background: #FAFAFA; 
+    line-height: 1.5;
+    color: #333333;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* For each h[1-6] generate the instruction block. */
+@for $i from 1 through 6{
+    h#{$i}{
+        padding: 0;
+        margin: 0; 
+    }
+}
+
+/* For each h[1-6] generate the instruction block for divide h[1-6] font size. */
+$max-size: 2;
+$lim: ($max-size / 6);
+$counter: 6;
+@for $index from 1 through 6 {
+    h#{$index}{
+        font-size: ($lim * $counter)+rem;
+    }
+    $counter: $counter - 1;
+}
+
+li, span, label{
+    font-size: 1.5rem;
+}

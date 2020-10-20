@@ -1,0 +1,45 @@
+/**************************************************************************** */
+/* SMACSS Layouts.
+***************************************************************************** */
+#header {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 20% 80%;
+  min-height: 60vh;
+  justify-items: start;
+  align-items: center;
+  margin-top: 2em;
+  padding-left: 2%; }
+
+#footer {
+  width: 100vw; }
+  #footer .footer__copy-right {
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    color: #999999;
+    opacity: 0.4;
+    width: 100vw;
+    font-size: 1rem; }
+
+#primary-navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 0;
+  padding: 1rem 0;
+  margin-bottom: 1rem 0;
+  border: none;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fdf5dd; }
+  #primary-navbar .primary-navbar__item {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1.7rem !important;
+    font-weight: 700;
+    padding-left: 1em; }
+  #primary-navbar .primary-navbar__link {
+    text-decoration: none;
+    color: #444444; }
